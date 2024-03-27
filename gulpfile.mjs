@@ -67,11 +67,7 @@ export const scripts = () => {
       .pipe($if(isDevelopment(), sourcemaps.init()))
       .pipe(concat('app.js'))
       // .pipe(babel(options.scripts))
-      .pipe(
-        webpack({
-          // Any configuration options...
-        }),
-      )
+      .pipe(webpack({}))
       .pipe($if(isProduction(), uglify()))
       .pipe($if(isDevelopment(), sourcemaps.write()))
       .pipe(dest(`${outDir}/scripts/`))

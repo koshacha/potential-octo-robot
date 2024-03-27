@@ -1,0 +1,17 @@
+$brown-color-light: #ba8554;
+$brown-color-dark: #a14f03;
+$grey-color: #777777;
+$white-color: #fafafa;
+$dark-color: #000;
+
+$brown-black-gradient: linear-gradient(
+  to right,
+  rgba($brown-color-light, 0.7),
+  rgba($dark-color, 0.7)
+);
+
+$brown-light-brown-dark-gradient: linear-gradient(
+  to right,
+  rgba($brown-color-light, 0.7),
+  rgba($brown-color-dark, 0.7)
+);

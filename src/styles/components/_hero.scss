@@ -1,0 +1,37 @@
+.hero {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  background:
+    $brown-black-gradient,
+    url(/images/hero-bg.jpg) center / cover no-repeat scroll;
+  height: 95vh;
+  color: $white-color;
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-transform: lowercase;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 56px;
+    height: 70px;
+  }
+}

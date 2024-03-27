@@ -1,7 +1,4 @@
-doctype html
-html.no-js(lang='ru')
-    include /components/service/_head
-    body
-        block page
-        include /components/_simple-block
-    include /components/service/_js
+extends /components/layouts/page.pug
+
+block content
+  include /components/widgets/hero
