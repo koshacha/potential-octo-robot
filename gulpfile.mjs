@@ -7,6 +7,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
+import webpack from 'webpack-stream';
 import inject from 'gulp-inject';
 import {
   isDevelopment,
@@ -61,13 +62,20 @@ export const imageOptimisation = () => {
 
 export const scripts = () => {
   const outDir = getDestDir(isTest());
-  return src('src/scripts/*.js')
-    .pipe($if(isDevelopment(), sourcemaps.init()))
-    .pipe(concat('app.js'))
-    .pipe(babel(options.scripts))
-    .pipe($if(isProduction(), uglify()))
-    .pipe($if(isDevelopment(), sourcemaps.write()))
-    .pipe(dest(`${outDir}/scripts`));
+  return (
+    src('src/scripts/app.js')
+      .pipe($if(isDevelopment(), sourcemaps.init()))
+      .pipe(concat('app.js'))
+      // .pipe(babel(options.scripts))
+      .pipe(
+        webpack({
+          // Any configuration options...
+        }),
+      )
+      .pipe($if(isProduction(), uglify()))
+      .pipe($if(isDevelopment(), sourcemaps.write()))
+      .pipe(dest(`${outDir}/scripts/`))
+  );
 };
 
 export const injection = () => {
