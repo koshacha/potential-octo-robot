@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .hero {
   display: flex;
   position: relative;
@@ -12,11 +14,8 @@
   color: $white-color;
 
   &__title {
+    animation: leftToRight 1s ease-in;
     margin-bottom: 10px;
-    font-weight: 800;
-    font-size: 50px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
   }
 
   &__subtitle {
