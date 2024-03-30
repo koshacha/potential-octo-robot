@@ -47,9 +47,16 @@ export const styles = () => {
     .pipe(dest(`${outDir}/css`));
 };
 
+export const staticFiles = () => {
+  const outDir = getDestDir(isTest());
+  return src('src/public/**/*', { ignorePath: 'images' }).pipe(
+    dest(`${outDir}`),
+  );
+};
+
 export const imageOptimisation = () => {
   const outDir = getDestDir(isTest());
-  return src('src/assets/images/**/*')
+  return src('src/public/images/**/*')
     .pipe(
       imagemin([
         imagemin.mozjpeg(options.mozjpeg),
@@ -94,6 +101,7 @@ export const build = series(
   scripts,
   html,
   injection,
+  staticFiles,
   imageOptimisation,
 );
 
