@@ -25,3 +25,7 @@ node_modules/
 # generate output
 dist
 test-build
+
+# macos
+
+.DS_Store
