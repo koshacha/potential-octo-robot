@@ -1,3 +1,47 @@
+@use '../vendors/gls' as gls;
+@use '../abstracts/variables' as *;
+
 .about {
-  
+  padding: 8rem 0;
+
+  &__title {
+    text-shadow: 0 0.4rem 0.4rem rgba($dark-color, 25%);
+  }
+
+  &__columns {
+    @include gls.breakpoint(min, medium) {
+      @include gls.columnizer(2, 2rem);
+    }
+  }
+
+  &__gallery {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    @include gls.sizer(32rem, 20rem);
+    z-index: 5;
+    transition: all 0.3s;
+    border-radius: 0.5rem;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        top: ($i - 1) * (10rem - (0.5rem * $i));
+        $offset: (2rem * ($i - 1));
+        @if $i % 2 == 0 {
+          left: 20rem + $offset;
+        } @else {
+          left: $offset;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      z-index: 10;
+      outline: solid 1rem $brown-color-light;
+      outline-offset: 1rem;
+    }
+  }
 }

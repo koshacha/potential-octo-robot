@@ -1,0 +1,13 @@
+mixin adventure-card(title, desc, iconClass)
+  .adventure-card
+    i.adventure-card__icon(class!=iconClass)
+    h3.adventure-card__title.heading_third= title 
+    .adventure-card__text= desc
+
+section.adventures
+  .container
+    .adventures__list 
+      +adventure-card('Приключение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quas provident incidunt hic voluptatum.', 'icon-pointer')
+      +adventure-card('Приключение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quas provident incidunt hic voluptatum.', 'icon-marker')
+      +adventure-card('Приключение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quas provident incidunt hic voluptatum.', 'icon-compass')
+      +adventure-card('Приключение', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quas provident incidunt hic voluptatum.', 'icon-globe')

@@ -1,0 +1,11 @@
+$sizes: (
+  small: 1rem,
+  medium: 5rem,
+  large: 8rem,
+);
+
+@each $size, $value in $sizes {
+  .mb_#{$size} {
+    margin-bottom: $value;
+  }
+}

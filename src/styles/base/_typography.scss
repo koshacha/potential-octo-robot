@@ -1,8 +1,44 @@
+@use '../vendors/gls' as gls;
+@use '../abstracts/variables' as *;
+@use '../utils/margins' as mb;
+
+body {
+  background-color: #fff;
+  color: #777;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  margin-bottom: 4rem;
+}
+
 .heading {
   &_first {
     font-weight: 800;
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-size: 5rem;
+    letter-spacing: 1rem;
     text-transform: uppercase;
+  }
+
+  &_second {
+    font-weight: 800;
+    font-size: 3.6rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    @include gls.text-gradient(right, $brown-color-light $brown-color-dark);
+  }
+
+  &_third {
+    margin-bottom: 1rem;
+    font-style: 2rem;
+    font-weight: 700;
+  }
+
+  &_fourth {
+    font-style: 2.8rem;
+    font-weight: 300;
   }
 }

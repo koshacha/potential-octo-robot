@@ -1,3 +1,18 @@
+@use '../vendors/gls' as *;
+
+$bps: (
+  57.5rem: 27rem,
+  76.7rem: 36rem,
+  99.1rem: 48rem,
+  119.9rem: 59rem,
+);
+
 .container {
-  background-color: #f7f7f7;
+  padding: 0 1.5rem;
+
+  @each $bp, $padding in $bps {
+    @include breakpoint(min, $bp) {
+      padding: 0 calc(50% - #{$padding});
+    }
+  }
 }

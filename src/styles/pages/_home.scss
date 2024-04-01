@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+@use '../vendors/gls' as gls;
+
+.adventures {
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  background:
+    $brown-light-brown-dark-gradient,
+    url(/images/adventures-bg.jpg) top center / cover no-repeat;
+  padding: 15rem 0;
+  &__list {
+    @include gls.columnizer(4, 6rem);
+  }
+}
