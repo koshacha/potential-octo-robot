@@ -21,7 +21,6 @@
   &__image {
     position: absolute;
     @include gls.sizer(32rem, 20rem);
-    z-index: 5;
     transition: all 0.3s;
     border-radius: 0.5rem;
 
@@ -31,7 +30,7 @@
         $offset: (2rem * ($i - 1));
         @if $i % 2 == 0 {
           left: 20rem + $offset;
-        } @else {
+        } @else  {
           left: $offset;
         }
       }

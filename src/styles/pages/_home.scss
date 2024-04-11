@@ -3,11 +3,32 @@
 
 .adventures {
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+  animation: parallax forwards;
   background:
     $brown-light-brown-dark-gradient,
     url(/images/adventures-bg.jpg) top center / cover no-repeat;
   padding: 15rem 0;
+  animation-range: cover;
+  animation-timeline: view();
+
   &__list {
     @include gls.columnizer(4, 6rem);
+  }
+}
+
+@keyframes parallax {
+  from {
+    background-position-y: -100px;
+  }
+
+  to {
+    background-position-y: 0px;
+  }
+}
+
+.popular-toures {
+  &__items {
+    @include gls.columnizer(3, 6rem);
   }
 }

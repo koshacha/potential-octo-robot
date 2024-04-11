@@ -1,5 +1,20 @@
-section.popular-toures 
-  .container 
+- var terms = ["Группы от 6 человек", "Продолжительность 2 час", "В группе 1 гид", "Дальность полета 6км", "Бесплатные сувениры"];
+
+mixin tour-card(img, title)
+  .tour-card
+    .tour-card__front
+      img.tour-card__cover(src=img)
+      h4.heading_fourth.tour-card__title= title
+      ul.tour-card__terms
+        each term in terms
+          li= term
+    .tour-card__back
+
+
+section.popular-toures
+  .container
     h2.heading_second Наиболее популярные туры
-    .popular-toures__list 
-      +tour-card(image, title)
+    .popular-toures__items
+      +tour-card("/images/tour-1.png", "Групповые туры")
+      +tour-card("/images/tour-2.png", "Частные туры")
+      +tour-card("/images/tour-3.png", "Смотровые площадки")

@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.tour-card {
+  box-shadow: 0 4px 4px 0 rgba(#000000, 0.25);
+  border-radius: 0.3rem;
+
+  &__title {
+    display: inline;
+    background: $brown-light-brown-dark-gradient;
+    max-width: 50%;
+  }
+
+  &__front {
+  }
+
+  &__back {
+  }
+  &__cover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    width: 100%;
+  }
+  &__terms {
+  }
+}
