@@ -56,6 +56,10 @@ export const staticFiles = () => {
 
 export const imageOptimisation = () => {
   const outDir = getDestDir(isTest());
+
+  if (isTest())
+    return src('src/public/images/**/*').pipe(dest(`${outDir}/images`));
+
   return src('src/public/images/**/*')
     .pipe(
       imagemin([
@@ -118,7 +122,7 @@ export default () => {
   watch('src/styles/**/*', series(styles));
   watch('src/scripts/**/*.js', series(scripts));
   watch('src/(pages|components)/**/*', series(html, injection));
-  watch('src/assets/images/**/*', imageOptimisation);
+  watch('src/public/images/**/*', imageOptimisation);
 
   browserSync.init({
     server: {
