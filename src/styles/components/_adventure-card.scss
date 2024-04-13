@@ -1,9 +1,9 @@
 @use '../abstracts/variables' as *;
 
 .adventure-card {
-  box-shadow: 0 0.4rem 0.4rem 0 rgba($dark-color, 10%);
+  box-shadow: 0 0.4rem 0.4rem 0 rgba($clr-black, 10%);
   border-radius: 0.5rem;
-  background: rgba($white-color, 80%);
+  background: rgba($clr-white, 80%);
   padding: 2.5rem;
   padding-bottom: 3rem;
   text-align: center;
@@ -15,7 +15,7 @@
   &__icon {
     display: inline-block;
     margin-bottom: 2.5rem;
-    background: $brown-light-brown-dark-gradient;
+    background: $gradient-lightbrown-to-brown;
     background-clip: text;
     color: transparent;
     font-size: 6.4rem;

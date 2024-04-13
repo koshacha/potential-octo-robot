@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $grey-dark-color;
+  background: $clr-darkgray;
   padding: 8rem 5rem;
 
   &__logo {
@@ -22,7 +22,7 @@
     list-style: none;
 
     a {
-      color: $white-color;
+      color: $clr-white;
       text-decoration: none;
       text-transform: uppercase;
     }

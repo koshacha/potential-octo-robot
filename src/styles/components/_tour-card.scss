@@ -6,8 +6,9 @@
 
   &__title {
     display: inline;
-    background: $brown-light-brown-dark-gradient;
+    background: $gradient-lightbrown-to-brown;
     max-width: 50%;
+    color: $clr-white;
   }
 
   &__front {

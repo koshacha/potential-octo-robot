@@ -1,18 +1,18 @@
-$brown-color-light: #ba8554;
-$brown-color-dark: #a14f03;
-$grey-color: #777777;
-$white-color: #fafafa;
-$dark-color: #000;
-$grey-dark-color: #333;
+$clr-lightbrown: #ba8554;
+$clr-brown: #a14f03;
+$clr-gray: #777777;
+$clr-white: #fafafa;
+$clr-black: #000;
+$clr-darkgray: #333;
 
-$brown-black-gradient: linear-gradient(
+$gradient-lightbrown-to-black: linear-gradient(
   to right,
-  rgba($brown-color-light, 0.7),
-  rgba($dark-color, 0.7)
+  rgba($clr-lightbrown, 0.7),
+  rgba($clr-black, 0.7)
 );
 
-$brown-light-brown-dark-gradient: linear-gradient(
+$gradient-lightbrown-to-brown: linear-gradient(
   to right,
-  rgba($brown-color-light, 0.7),
-  rgba($brown-color-dark, 0.7)
+  rgba($clr-lightbrown, 0.7),
+  rgba($clr-brown, 0.7)
 );

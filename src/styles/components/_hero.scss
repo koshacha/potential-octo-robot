@@ -9,10 +9,10 @@
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   background:
-    $brown-black-gradient,
+    $gradient-lightbrown-to-black,
     url(/images/hero-bg.jpg) center / cover no-repeat scroll;
   height: 95vh;
-  color: $white-color;
+  color: $clr-white;
 
   &__title {
     animation: leftToRight 1s ease-in;

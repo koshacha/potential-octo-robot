@@ -28,7 +28,7 @@ p {
     letter-spacing: 1rem;
     text-align: center;
     text-transform: uppercase;
-    @include gls.text-gradient(right, $brown-color-light $brown-color-dark);
+    @include gls.text-gradient(right, $clr-lightbrown $clr-brown);
   }
 
   &_third {
